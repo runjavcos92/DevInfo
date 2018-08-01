@@ -70,90 +70,83 @@
                         </div>              
                     </div>
                 </div>         
-<!-- -Inicio de dropdown -->
-                                
-                                                <div class="panel panel-primary center-block" >
+<!-- -Inicio de dropdown -->                                
+                                                <div class="panel panel-primary" >
                                                     <div class="panel-heading">Información de la Publicación</div>
                                                     <div class="panel-body">
                                                             <!--Lista de Coautores -->
                                                                 <div class="row">
-                                                                            <div class="col-lg-4">
-                                                                                <div class="col-lg-7">
-                                                                                    <div class="list-group" id="list-tab" role="tablist">
-                                                                                        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab">Coautor1</a>
-                                                                                        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab">Coautor2</a>
-                                                                                        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab">Coautor3</a>
-                                                                                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab">Coautor4</a>
-                                                                                    </div>
-                                                                                </div>
-                                                                                    <div class="col-lg-7">
-                                                                                      <div class="tab-content col-lg-4" id="nav-tabContent">
-                                                                                        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">...</div>
-                                                                                        <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>
-                                                                                        <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>
-                                                                                        <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
-                                                                                      </div>
-                                                                                    </div>
-                                                                            </div>
-                                                                    <div>
-                                                                        <div class="col-sm-2">
-                                                                                <button class="btn btn-primary" type="button" aria-haspopup="true" aria-expanded="true">
-                                                                                <i class="glyphicon glyphicon-arrow-right"></i>
-                                                                            </button>
+                                                                    <div class="col-md-12">
+                                                                        <label>Seleccionar Coautores: </label>
+                                                                        <div class="list-group" id="listaCoautores">
+                                                                            <a class="list-group-item list-group-item-info active" id="list">Coautor</a>
+                                                                            <a class="list-group-item list-group-item-info " id="list">Coautor</a>
                                                                         </div>
+                                                                        <div class="col-md-12">
+                                                                            <div class="tab-content" id="nav-Content">
+                                                                                <div class="tab-content fade show active" id="listaCoautores"></div>
+                                                                                <div class="tab-content fade show " id="listaCoautores"></div>
+                                                                            </div>
+                                                                        </div>   
                                                                     </div>
-                                                                <!-- Text Area -->
-                                                                                     <div class="col-1">
-                                                                                        <div class="col-lg-4">
-                                                                                            <label for="comment">Coautores</label>
-                                                                                            <textarea class="form-control" rows="5" id="comment"></textarea>
-                                                                                        </div>
-                                                                                    </div>
-                                                                </div><br></br>
+        
+                                                            </div>
+                                                            <div class="row">
                                                                 <!-- Articulo-->
-                                                                                    <div class="input-group col-lg-7">
+                                                                <div class="col-md-4">
+                                                                                    <div class="input-group">
                                                                                         <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-file"></i></span>
-                                                                                        <input type="text" class="form-control col-lg-7" placeholder="Nombre Artículo" aria-describedby="basic-addon1"/>
-                                                                                    </div><br></br>                        
+                                                                                        <input type="text" class="form-control" placeholder="Nombre Artículo" aria-describedby="basic-addon1"/>
+                                                                                    </div>
+                                                                </div>
                                                         <!-- Input Volumen -->
-                                                            <div class="col-lg-7">
-                                                                    <div class="input-group col-lg-7">
+                                                            <div class="col-md-2">
+                                                                    <div class="input-group">
                                                                         <span class="input-group-addon" id="basic-addon3"><i class="glyphicon glyphicon-scale"></i></span>
                                                                         <input type="text" class="form-control" placeholder="Volúmen" aria-describedby="basic-addon1"/>
                                                                     </div>
                                                             </div>
                                                         <!-- Input Páginas -->
-                                                            <div class="col-lg-7">
-                                                                <div class="input-group col-lg-7">
+                                                            <div class="col-md-2">
+                                                                <div class="input-group">
                                                                 <span class="input-group-addon" id="basic-addon4"><i class="glyphicon glyphicon-book"></i></span>
                                                                 <input type="text" class="form-control" placeholder="Páginas" aria-describedby="basic-addon1"/>
                                                             </div>
                                                         </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="panel panel-primary center-block" >
-                                                    <div class="panel-heading">Información del Artículo</div>
+                                                    <div class="panel-heading">Información de la Revista</div>
                                                         <div class="panel-body">
-                                                            <div class="col-lg-4">
-                                                                <div class="input-group col-lg-10">
+                                                          <div class="row">
+                                                            <div class="col-md-4">
+                                                                <div class="input-group">
                                                                     <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-th-list"></i></span>
-                                                                    <input type="text" class="form-control" placeholder="Categoría" aria-describedby="basic-addon1"/>
+                                                                    <input type="text" class="form-control" placeholder="Título" aria-describedby="basic-addon1"/>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-lg-4">
-                                                                  <div class="input-group col-lg-10">
+                                                            <div class="col-md-2">
+                                                                <div class="input-group">
                                                                     <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-exclamation-sign"></i></span>
-                                                                    <input type="text" class="form-control" placeholder="Factor de Impacto" aria-describedby="basic-addon1"/>
-                                                                  </div>
+                                                                    <input type="text" class="form-control" placeholder="Factor" aria-describedby="basic-addon1"/>
+                                                                </div>
                                                             </div>
-                                                            <div class="col-lg-4">
-                                                                  <div class="input-group col-lg-10">
+                                                            <div class="col-md-2">
+                                                                  <div class="input-group">
                                                                     <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-equalizer"></i></span>
                                                                     <input type="text" class="form-control" placeholder="Grupo" aria-describedby="basic-addon1"/>
                                                                   </div>
-                                                            </div> 
-                                                    </div>
-                                            </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="input-group">
+                                                                    <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-th-list"></i></span>
+                                                                    <input type="text" class="form-control" placeholder="Tipo" aria-describedby="basic-addon1"/>
+                                                                </div>
+                                                            </div>
+                                                           </div>
+                                                        </div>
+                                                </div>
 
                                                 <div class="panel panel-primary center-block" >
                                                     <div class="panel-heading">Información de Investigación</div>
