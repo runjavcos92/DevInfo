@@ -23,13 +23,21 @@
               </div>
               <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#about">Regresar a Lista</a></li>
-                  <li><a href="#contact">Salir</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Opciones <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#Save">Guardar</a></li>
+                              <li><a href="#">Eliminar </a></li>
+                              <li role="separator" class="divider"></li>
+                              <li class="dropdown-header"></li>
+                              <li><a href="#">Ver Publicaciones</a></li>
+                              <li><a href="#">Cerrar Sesión</a></li>
+                            </ul>
+                        </li>
                 </ul>
               </div>
             </div>
-        </nav> <br></br><br></br><br></br>
+        </nav> <br></br><br></br>
           <form class="form-horizontal col-md-6 col-md-offset"><br></br>
                 <div class="panel panel-primary center-block">
                   <div class="panel-heading">Búsqueda de Publicación</div>
@@ -58,13 +66,13 @@
                                             <div class="col-lg-7">
                                                     <div class="input-group">
                                                                 <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-user"></i></span>
-                                                                <input type="text" class="form-control" placeholder="Primer Autor" aria-describedby="basic-addon1"/>
+                                                                <input type="text" id="autor" class="form-control" placeholder="Primer Autor" aria-describedby="basic-addon1"/>
                                                     </div>
                                             </div><br></br><br></br>
                                         <div class="col-lg-7">
                                               <div class="input-group">
                                                 <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-bookmark"></i></span>
-                                                <input type="text" class="form-control" placeholder="Autor Correspondiente" aria-describedby="basic-addon1"/>
+                                                <input type="text" id="correspondiente" class="form-control" placeholder="Autor Correspondiente" aria-describedby="basic-addon1"/>
                                               </div>
                                         </div>
                         </div>              
