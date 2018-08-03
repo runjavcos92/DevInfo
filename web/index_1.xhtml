@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+  <ui:composition template="/WEB-INF/template/template.xhtml">
+    <ui:define name="head">
+        <title>Publicaciones</title>
+        <!-- Custom styles for this template -->
+        <h:outputStylesheet name="bootstrap-3.3.7-dist/css/bootstrap-theme.css"/>
+    </ui:define>
+    <ui:define name="body">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Publicaciones</a>
+              </div>
+              <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Opciones <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#Save">Guardar</a></li>
+                              <li><a href="#">Eliminar </a></li>
+                              <li role="separator" class="divider"></li>
+                              <li class="dropdown-header"></li>
+                              <li><a href="#">Ver Publicaciones</a></li>
+                              <li><a href="#">Cerrar Sesión</a></li>
+                            </ul>
+                        </li>
+                </ul>
+              </div>
+            </div>
+        </nav> <br></br><br></br>
+          <h:form class="form-horizontal col-md-6 col-md-offset" id="formulario_publicacion"><br></br>
+                <div class="panel panel-primary center-block">
+                  <div class="panel-heading">Información de la Publicación</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-5 btn-group">  
+                                <button class="btn btn-primary btn-lg dropdown-toggle" type="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                Año de Publicación
+                                <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="#">2017</a></li>
+                                    <li><a href="#">2018</a></li>
+                                </ul>
+                            </div>
+                                    <div class="col-lg-5 btn-group">
+                                          <button class="btn btn-primary btn-lg dropdown-toggle" type="button" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          Formato de Publicación
+                                          <span class="caret"></span>
+                                          </button>
+                                          <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
+                                              <li><a href="#">Impresa</a></li>
+                                              <li><a href="#">En línea</a></li>
+                                          </ul>
+                                    </div><br></br><br></br><br></br>
+                                            <div class="col-lg-7">
+                                                    <div class="input-group">
+                                                                <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-user"></i></span>
+                                                                <h:inputText id="autor" class="form-control" a:placeholder="Primer Autor" a:aria-describedby="basic-addon1" required="true"/>
+                                                    </div>
+                                            </div><br></br><br></br>
+                                        <div class="col-lg-7">
+                                              <div class="input-group">
+                                                <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-bookmark"></i></span>
+                                                <h:inputText id="correspondiente" class="form-control" a:placeholder="Autor Correspondiente" a:aria-describedby="basic-addon1"/>
+                                              </div>
+                                        </div><br></br><br></br>
+                          <!-- Lista de Coautores -->
+                                                                    <div class="col-lg-7">
+                                                                        <label>Seleccionar Coautores: </label>
+                                                                        <div class="list-group" id="listaCoautores">
+                                                                            <a class="list-group-item list-group-item-info active" id="list">Coautor</a>
+                                                                            <a class="list-group-item list-group-item-info " id="list">Coautor</a>
+                                                                        </div>
+                                                                        <div class="col-md-12">
+                                                                            <div class="tab-content" id="nav-Content">
+                                                                                <div class="tab-content fade show active" id="listaCoautores"></div>
+                                                                                <div class="tab-content fade show " id="listaCoautores"></div>
+                                                                            </div>
+                                                                        </div>   
+                                                                    </div>                  
+                        </div>              
+                    </div>
+                </div>                                      
+                                                <div class="panel panel-primary" >
+                                                    <div class="panel-heading">Información del Artículo</div>
+                                                    <div class="panel-body">
+                                                            <!--Lista de Coautores -->
+                                                                
+                                                            <div class="row">
+                                                                <!-- Articulo-->
+                                                                <div class="col-md-7">
+                                                                                    <div class="input-group">
+                                                                                        <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-file"></i></span>
+                                                                                        <h:inputText class="form-control" a:placeholder="Nombre del Artículo" a:aria-describedby="basic-addon1" readonly="true"/>
+                                                                                    </div>
+                                                                </div>
+                                                        <!-- Input Volumen -->
+                                                            <div class="col-md-2">
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon" id="basic-addon3"><i class="glyphicon glyphicon-scale"></i></span>
+                                                                        <h:inputText class="form-control" a:placeholder="Volúmen" a:aria-describedby="basic-addon1" readonly="true"/>
+                                                                    </div>
+                                                            </div>
+                                                        <!-- Input Páginas -->
+                                                            <div class="col-md-2">
+                                                                <div class="input-group">
+                                                                <span class="input-group-addon" id="basic-addon4"><i class="glyphicon glyphicon-book"></i></span>
+                                                                <h:inputText class="form-control" a:placeholder="Páginas" a:aria-describedby="basic-addon1" readonly="true"/>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-primary center-block" >
+                                                    <div class="panel-heading">Información de la Revista</div>
+                                                        <div class="panel-body">
+                                                          <div class="row">
+                                                            <div class="col-md-4">
+                                                                <div class="input-group">
+                                                                    <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-th-list"></i></span>
+                                                                    <h:inputText class="form-control" a:placeholder="Título de la Revista" a:aria-describedby="basic-addon1" readonly="true"/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <div class="input-group">
+                                                                    <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-exclamation-sign"></i></span>
+                                                                    <h:inputText class="form-control" a:placeholder="Factor" a:aria-describedby="basic-addon1" readonly="true"/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                  <div class="input-group">
+                                                                    <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-equalizer"></i></span>
+                                                                    <h:inputText class="form-control" a:placeholder="Grupo" a:aria-describedby="basic-addon1" readonly="true"/>
+                                                                  </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="input-group">
+                                                                    <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-th-list"></i></span>
+                                                                    <h:inputText class="form-control" a:placeholder="Tipo" a:aria-describedby="basic-addon1" readonly="true"/>
+                                                                </div>
+                                                            </div>
+                                                           </div>
+                                                        </div>
+                                                </div>
+
+                                                <div class="panel panel-primary center-block" >
+                                                    <div class="panel-heading">Información de Investigación</div>
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-lg-4 btn-group">
+                                                                    <div class="dropdown col-lg-7">
+                                                                        <button class="btn btn-primary btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                                        Area de Investigación
+                                                                        <span class="caret"></span>
+                                                                        </button>
+                                                                        <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
+                                                                            <li><a href="#">Biomedica</a></li>
+                                                                            <li><a href="#">...</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-4 btn-group">
+                                                                        <div class="dropdown col-lg-7">
+                                                                          <button class="btn btn-primary btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                                          Línea de Investigación
+                                                                          <span class="caret"></span>
+                                                                          </button>
+                                                                          <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
+                                                                              <li><a href="#">Pancreatitis</a></li>
+                                                                              <li><a href="#">...</a></li>
+                                                                          </ul>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="col-lg-4 btn-group">
+                                                                        <div class="dropdown col-lg-7">
+                                                                            <button class="btn btn-primary btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                                            Demanda Investigación
+                                                                            <span class="caret"></span>
+                                                                            </button>
+                                                                                  <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
+                                                                                      <li><a href="#">Neoplasias del sistema linfático</a></li>
+                                                                                      <li><a href="#">...</a></li>
+                                                                                  </ul>
+                                                                        </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Guardar</button>
+                                </div><div class="col-lg-4">
+                                    <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">Eliminar</button>
+                                </div>
+                            </div>
+
+                                <div id="myModal" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+
+                                  <!-- Modal content-->
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Confirmar</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>¿Desea Guardar la Informacion?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                       <button type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+                                    </div>
+                                  </div>
+
+                                </div>
+                              </div>
+      </h:form>
+    </ui:define>
+  </ui:composition>
+</html>
