@@ -16,3 +16,10 @@ function validar (){
         return false;
     }  
 }
+
+var options = '';
+$.each(data, function(index, value) {
+    options += '<option value="' + value.abc + '" text="' + value.abc + '" />';
+});
+
+$('.Input').append(options);

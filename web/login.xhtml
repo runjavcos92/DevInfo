@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+  <ui:composition template="/WEB-INF/template/template.xhtml">
+    <ui:define name="head">
+        <title>Publicaciones</title>
+        <!-- Custom styles for this template -->
+        <h:outputStylesheet name="bootstrap-3.3.7-dist/css/bootstrap-theme.css"/>
+    </ui:define>
+    <ui:define name="body">
+          <h:form class="form-horizontal" id="formulario_login"><br></br>
+              <div class="container">
+                        <div class="row">
+                                        <div class="col-md-offset-5 col-md-3">
+                                            <div class="wrapper">
+                                            <div class="input-group">
+                                                <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-user"></i></span>
+                                                <h:inputText id="usuario" class="form-control" a:placeholder="Usuario" a:aria-describedby="basic-addon1"/>
+                                            </div>
+                                        <br></br>
+                                        <div class="input-group">
+                                            <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-bookmark"></i></span>
+                                            <h:inputText id="password" class="form-control" a:placeholder="Contraseña" a:aria-describedby="basic-addon1"/>
+                                        </div><br></br>
+
+                                                
+                                                        <span class="group-btn">     
+                                                            <a href="index_1.xhtml" class="btn btn-primary btn-lg btn-block">login <i class="glyphicon glyphicon-log-in"></i></a>
+                                                        </span>
+                                        </div>
+                                    </div>
+                        </div>  
+              </div>
+        </h:form>
+    </ui:define>
+  </ui:composition>
+</html>
