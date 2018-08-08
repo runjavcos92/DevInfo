@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
   <ui:composition template="/WEB-INF/template/template.xhtml">
     <ui:define name="head">
         <title>Publicaciones</title>
@@ -44,52 +45,48 @@
                   <div class="panel-heading">Información de la Publicación</div>
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-lg-5 btn-group">  
-                                <button class="btn btn-primary btn-lg dropdown-toggle" type="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                Año de Publicación
-                                <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                    <li><a href="#">2017</a></li>
-                                    <li><a href="#">2018</a></li>
-                                </ul>
+                            <div class="col-lg-5 btn-group"> 
+                                <div class="dropdown col-lg-7">
+                                    <h:selectOneMenu value="" class="btn btn-primary btn-lg dropdown-toggle">
+                                            <f:selectItem class="dropdown-menu dropdown-menu-left" itemValue="0" itemLabel="Seleccionar el año"/>
+                                            <f:selectItem class="dropdown-menu dropdown-menu-left" itemValue="2017" itemLabel="2017"/>
+                                            <f:selectItem class="dropdown-menu dropdown-menu-left" itemValue="2018" itemLabel="2018"/>
+                                    </h:selectOneMenu>
+                                </div>
                             </div>
-                                    <div class="col-lg-5 btn-group">
-                                          <button class="btn btn-primary btn-lg dropdown-toggle" type="button" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                          Formato de Publicación
-                                          <span class="caret"></span>
-                                          </button>
-                                          <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
-                                              <li><a href="#">Impresa</a></li>
-                                              <li><a href="#">En línea</a></li>
-                                          </ul>
-                                    </div><br></br><br></br><br></br>
-                                            <div class="col-lg-7">
-                                                    <div class="input-group">
-                                                                <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-user"></i></span>
-                                                                <h:inputText id="autor" class="form-control" a:placeholder="Primer Autor" a:aria-describedby="basic-addon1" required="true"/>
-                                                    </div>
-                                            </div><br></br><br></br>
-                                        <div class="col-lg-7">
-                                              <div class="input-group">
-                                                <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-bookmark"></i></span>
-                                                <h:inputText id="correspondiente" class="form-control" a:placeholder="Autor Correspondiente" a:aria-describedby="basic-addon1"/>
-                                              </div>
-                                        </div><br></br><br></br>
+                        <div class="col-lg-5 btn-group">
+                            <h:selectOneMenu value="" class="btn btn-primary btn-lg dropdown-toggle">
+                                        <f:selectItem class="dropdown-menu dropdown-menu-left" itemValue="" itemLabel="Selecciona el Formato"/>
+                                        <f:selectItem class="dropdown-menu dropdown-menu-left" itemValue="impreso" itemLabel="Impreso"/>
+                                        <f:selectItem class="dropdown-menu dropdown-menu-left" itemValue="linea" itemLabel="En Línea"/>
+                            </h:selectOneMenu>
+                        </div><br></br><br></br><br></br>
+                    <div class="col-lg-7">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-user"></i></span>
+                            <h:inputText id="autor" class="form-control" a:placeholder="Primer Autor" a:aria-describedby="basic-addon1" required="true"/>
+                        </div>
+                    </div><br></br><br></br>
+                <div class="col-lg-7">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-bookmark"></i></span>
+                            <h:inputText id="correspondiente" class="form-control" a:placeholder="Autor Correspondiente" a:aria-describedby="basic-addon1"/>
+                    </div>
+                </div><br></br><br></br>
                           <!-- Lista de Coautores -->
-                                                                    <div class="col-lg-7">
-                                                                        <label>Seleccionar Coautores: </label>
-                                                                        <div class="list-group" id="listaCoautores">
-                                                                            <a class="list-group-item list-group-item-info active" id="list">Coautor</a>
-                                                                            <a class="list-group-item list-group-item-info " id="list">Coautor</a>
-                                                                        </div>
-                                                                        <div class="col-md-12">
-                                                                            <div class="tab-content" id="nav-Content">
-                                                                                <div class="tab-content fade show active" id="listaCoautores"></div>
-                                                                                <div class="tab-content fade show " id="listaCoautores"></div>
-                                                                            </div>
-                                                                        </div>   
-                                                                    </div>                  
+                <div class="col-lg-7">
+                    <label>Seleccionar Coautores: </label>
+                        <div class="list-group" id="listaCoautores">
+                            <a class="list-group-item list-group-item-info active" id="list">Coautor</a>
+                            <a class="list-group-item list-group-item-info " id="list">Coautor</a>
+                        </div>
+                    <div class="col-md-12">
+                        <div class="tab-content" id="nav-Content">
+                            <div class="tab-content fade show active" id="listaCoautores"></div>
+                                <div class="tab-content fade show " id="listaCoautores"></div>
+                        </div>
+                    </div>   
+                </div>                  
                         </div>              
                     </div>
                 </div>                                      
@@ -167,39 +164,21 @@
                                                             <div class="row">
                                                                 <div class="col-lg-4 btn-group">
                                                                     <div class="dropdown col-lg-7">
-                                                                        <button class="btn btn-primary btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                                                        Area de Investigación
-                                                                        <span class="caret"></span>
-                                                                        </button>
-                                                                        <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
-                                                                            <li><a href="#">Biomedica</a></li>
-                                                                            <li><a href="#">...</a></li>
-                                                                        </ul>
+                                                                        <h:selectOneMenu value="#{areInves.nombreArea}" class="btn btn-primary btn-lg dropdown-toggle">
+                                                                            <f:selectItem class="dropdown-menu dropdown-menu-left" itemValue="" itemLabel="Area de Investigacion"/>
+                                                                            <f:selectItem class="dropdown-menu dropdown-menu-left" value="#{areaInves.areas}"/>
+                                                                        </h:selectOneMenu>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-4 btn-group">
-                                                                        <div class="dropdown col-lg-7">
-                                                                          <button class="btn btn-primary btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                                                          Línea de Investigación
-                                                                          <span class="caret"></span>
-                                                                          </button>
-                                                                          <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
-                                                                              <li><a href="#">Pancreatitis</a></li>
-                                                                              <li><a href="#">...</a></li>
-                                                                          </ul>
-                                                                        </div>
+                                                                        <h:selectOneMenu value="" class="btn btn-primary btn-lg dropdown-toggle">
+                                                                            <f:selectItem class="dropdown-menu dropdown-menu-left" itemValue="0" itemLabel="Línea de Investigación"/>
+                                                                        </h:selectOneMenu>
                                                                 </div>
                                                                 <div class="col-lg-4 btn-group">
-                                                                        <div class="dropdown col-lg-7">
-                                                                            <button class="btn btn-primary btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                                                            Demanda Investigación
-                                                                            <span class="caret"></span>
-                                                                            </button>
-                                                                                  <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
-                                                                                      <li><a href="#">Neoplasias del sistema linfático</a></li>
-                                                                                      <li><a href="#">...</a></li>
-                                                                                  </ul>
-                                                                        </div>
+                                                                        <h:selectOneMenu value="" class="btn btn-primary btn-lg dropdown-toggle">
+                                                                            <f:selectItem class="dropdown-menu dropdown-menu-left" itemValue="0" itemLabel="Demanda de Investigación"/>
+                                                                        </h:selectOneMenu>
                                                                 </div>
                                                             </div>
                                                         </div>

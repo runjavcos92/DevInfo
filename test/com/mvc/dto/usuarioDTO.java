@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package scr.dao;
+package com.mvc.dto;
 
 /**
  *
  * @author FRANCISCONAVA
  */
-public class usuario {
+public class usuarioDTO {
     
     private String nombre;
     private String contraseña;
@@ -49,7 +49,7 @@ public class usuario {
         return id_rol;
     }
 
-    public usuario(String nombre, String contraseña, Integer id_instituto, Integer id_rol) {
+    public usuarioDTO(String nombre, String contraseña, Integer id_instituto, Integer id_rol) {
         this.nombre = nombre;
         this.contraseña = contraseña;
         this.id_instituto = id_instituto;
