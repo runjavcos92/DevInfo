@@ -8,4 +8,9 @@
   <!-- This supports resources referenced from within css files e.g. url(../fonts/glyphicons) -->
     <resource-handler>org.omnifaces.resourcehandler.UnmappedResourceHandler</resource-handler>
 </application>
+<managed-bean>
+    <managed-bean-name>
+        
+    </managed-bean-name>
+</managed-bean>
 </faces-config>
