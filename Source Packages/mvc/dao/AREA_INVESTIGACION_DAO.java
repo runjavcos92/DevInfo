@@ -74,12 +74,12 @@ public class AREA_INVESTIGACION_DAO {
 			ps = conn.prepareStatement(SQL_SELECT_All);
 			rs = ps.executeQuery();
 			List results = getResults(rs);
-			if (results.size() > 0) {
-                                System.out.println(" "+results);
-				return results;
-			} else {
-				return null;
-			}
+			while(rs.next()){
+                            results.add(rs.getString("Area_de_investigacion"));
+                            
+                        }
+                        //System.out.println(""+results );
+                        return results;
 		} finally {
 			cerrar(rs);
 			cerrar(ps);

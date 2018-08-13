@@ -8,10 +8,5 @@
   <!-- This supports resources referenced from within css files e.g. url(../fonts/glyphicons) -->
     <resource-handler>org.omnifaces.resourcehandler.UnmappedResourceHandler</resource-handler>
 </application>
-<managed-bean>
-    <managed-bean-name>AREA_INVESTIGACION_DAO
-    </managed-bean-name>
-    <managed-bean-class>loadAll</managed-bean-class>
-    <managed-bean-scope>session</managed-bean-scope>
-</managed-bean>
+
 </faces-config>

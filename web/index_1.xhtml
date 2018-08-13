@@ -164,9 +164,8 @@
                                                             <div class="row">
                                                                 <div class="col-lg-4 btn-group">
                                                                     <div class="dropdown col-lg-7">
-                                                                        <h:selectOneMenu value="#{AREA_INVESTIGACION_DTO.area_de_investigacion}" class="btn btn-primary btn-lg dropdown-toggle">
-                                                                            <f:selectItem class="dropdown-menu dropdown-menu-left" itemValue="" itemLabel="Area de Investigacion"/>
-                                                                            <f:selectItem class="dropdown-menu dropdown-menu-left" value="#{AREA_INVESTIGACION_DTO.areas_de_investigacion}"/>
+                                                                        <h:selectOneMenu value="#{area_investigacion.area_de_investigacion}" class="btn btn-primary btn-lg dropdown-toggle">
+                                                                            <f:selectItem class="dropdown-menu dropdown-menu-left" value="#{area_investigacion.getAreas()}"/>
                                                                         </h:selectOneMenu>
                                                                     </div>
                                                                 </div>

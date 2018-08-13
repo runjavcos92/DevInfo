@@ -7,6 +7,7 @@ package mvc.dao;
 
 import mvc.controller.BDConect;
 import java.sql.SQLException;
+import mvc.dtoBeans.AREA_INVESTIGACION_DTO;
 
 /**
  *
@@ -16,6 +17,8 @@ public class main {
     public static void main(String[] args) throws SQLException {
         AREA_INVESTIGACION_DAO AREA = new AREA_INVESTIGACION_DAO();
         BDConect CON = new BDConect();
+        AREA_INVESTIGACION_DTO dto = new AREA_INVESTIGACION_DTO();
         AREA.loadAll(CON.conectar());
+        //dto.getAreas();
     }
 }
