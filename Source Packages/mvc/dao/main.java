@@ -5,6 +5,7 @@
  */
 package mvc.dao;
 
+import mvc.controller.BDConect;
 import java.sql.SQLException;
 
 /**

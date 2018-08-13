@@ -1,6 +1,7 @@
 
 package mvc.dao;
 
+import mvc.dtoBeans.AREA_INVESTIGACION_DTO;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
