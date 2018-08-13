@@ -7,7 +7,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import mvc.dtoBeans.AREA_INVESTIGACION_DTO;
 
 public class AREA_INVESTIGACION_DAO {
 	
@@ -75,6 +74,7 @@ public class AREA_INVESTIGACION_DAO {
 			rs = ps.executeQuery();
 			List results = getResults(rs);
 			if (results.size() > 0) {
+                                System.out.println(" "+results);
 				return results;
 			} else {
 				return null;

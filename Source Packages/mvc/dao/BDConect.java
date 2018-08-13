@@ -3,23 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mvc.controller;
+package mvc.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
-import java.sql.Statement;
+
 /**
  *
  * @author FRANCISCONAVA
  */
 public class BDConect {
-    
-    public BDConect(){
-        
-    }
     
     public Connection conectar(){
         String direccion = "127.0.0.1";
@@ -30,7 +24,7 @@ public class BDConect {
         String connectionUrl = "jdbc:sqlserver://" + direccion + ":" + puerto + ";"
                 + "databaseName=" + db + ";user=" + usuario + ";password=" + pass + ";";
         
-        System.out.println(""+connectionUrl);
+        //System.out.println(""+connectionUrl);
         // Declaramos los sioguientes objetos
         Connection con = null;
         try {

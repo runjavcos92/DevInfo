@@ -1,6 +1,5 @@
-package mvc.dtoBeans;
+package mvc.dao;
 
-import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -10,7 +9,6 @@ public class AREA_INVESTIGACION_DTO {
 	
 	private String id_area;
 	private String area_de_investigacion;
-        private List<String> areas_de_investigacion;
 	
 	public AREA_INVESTIGACION_DTO() {
 	}
@@ -30,7 +28,7 @@ public class AREA_INVESTIGACION_DTO {
 	public void setArea_de_investigacion(String area_de_investigacion) {
 		this.area_de_investigacion = area_de_investigacion;
 	}
-	
+        	
 	@Override
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
